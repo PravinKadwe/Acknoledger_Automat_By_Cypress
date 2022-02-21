@@ -1,5 +1,7 @@
 describe('Visit to login', function () {
 
+    // To change Email and password just change the below values.
+
     let email = 'acknoledger@dispostable.com';
     let password = 'Sunil123$';
 
@@ -16,7 +18,8 @@ describe('Visit to login', function () {
         cy.get('.show-password').click()
         cy.wait(800)
         cy.get('input[name="password"]').should('have.value', password)
-        // .should('have.value','acknoledger@dispostable.com')
+
+        // If reCaptcha is bypass then cypress does not need to wait. 
         // cy.wait(15000)
 
         cy.get('button[type="submit"]').click()
