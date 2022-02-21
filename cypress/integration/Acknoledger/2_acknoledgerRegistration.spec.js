@@ -1,5 +1,10 @@
 /// <reference types ="Cypress" />
 
+/**************************************************
+ * Code Made By: Pravin kadwe
+ * Title: Acknoledger Registration Automation By Cypress with javaScript.
+ *************************************************/
+
 describe('New User Registration', function () {
 
     // All the below variable are used for partnet Registration details. 
