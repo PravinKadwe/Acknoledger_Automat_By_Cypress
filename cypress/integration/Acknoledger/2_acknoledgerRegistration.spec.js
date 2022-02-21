@@ -16,7 +16,7 @@ describe('New User Registration', function () {
 
     let password = 'Pravin#1479';
 
-    // All the above variable are used for partnet Registration details.
+    // All the above variable are used for partner Registration details.
 
     it('Visit Registration site', function () {
         cy.viewport(1326, 1326)
@@ -87,7 +87,9 @@ describe('New User Registration', function () {
     it('Provide Requested Details', function () {
         cy.viewport(1326, 1326)
 
-        // cy.url().should('include', '/register')
+        // This is used for providing details to partner Registration Form.
+
+        cy.url().should('include', '/register')
 
         cy.get('input[name="orgName"]').type(orgName);
 
@@ -112,6 +114,8 @@ describe('New User Registration', function () {
         cy.wait(900);
 
         cy.get('.btn-secondary').click();
+
+        // After submitting all the required details the Form will load on login page.
 
         cy.wait(3000);
 
